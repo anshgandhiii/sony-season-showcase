@@ -23,6 +23,7 @@ export function Footer() {
                 { href: "/", label: "Home" },
                 { href: "/about", label: "About Us" },
                 { href: "/products", label: "Products" },
+                { href: "/accreditation", label: "Accreditation" },
                 { href: "/contact", label: "Contact" },
               ].map((link) => (
                 <li key={link.href}>
