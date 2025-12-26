@@ -47,7 +47,7 @@ const Index = () => {
     <Layout>
       <SEO />
       {/* Hero Section */}
-      <section className="relative min-h-[85vh] flex items-center overflow-hidden">
+      <section className="relative min-h-[90vh] flex items-center overflow-hidden">
         <div className="absolute inset-0">
           <img
             src={heroImage}
@@ -59,11 +59,19 @@ const Index = () => {
 
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-2xl">
+            <motion.p
+              initial={{ opacity: 0, y: 10 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.4 }}
+              className="text-primary-foreground/80 text-sm uppercase tracking-widest mb-3"
+            >
+              Since 2007
+            </motion.p>
             <motion.h1
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5 }}
-              className="font-serif text-3xl md:text-4xl lg:text-5xl font-semibold text-primary-foreground leading-tight mb-4"
+              transition={{ duration: 0.5, delay: 0.1 }}
+              className="font-serif text-4xl md:text-5xl lg:text-6xl font-semibold text-primary-foreground leading-tight mb-5"
             >
               Authentic. Organic.
               <br />
@@ -72,7 +80,7 @@ const Index = () => {
             <motion.p
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.1 }}
+              transition={{ duration: 0.5, delay: 0.2 }}
               className="text-primary-foreground/90 text-lg mb-8 max-w-lg"
             >
               Leading manufacturers of seasonings and spices, trusted by renowned food brands for authentic flavours.
@@ -80,8 +88,8 @@ const Index = () => {
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.2 }}
-              className="flex gap-4"
+              transition={{ duration: 0.5, delay: 0.3 }}
+              className="flex flex-wrap gap-4"
             >
               <Button asChild variant="hero">
                 <Link to="/products">
@@ -95,13 +103,13 @@ const Index = () => {
           </div>
         </div>
 
-        <div className="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-t from-background to-transparent" />
+        <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-background to-transparent" />
       </section>
 
       {/* Highlights Section */}
-      <section className="py-16">
+      <section className="py-20">
         <div className="container mx-auto px-4">
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
             {highlights.map((item, index) => (
               <motion.div
                 key={item.title}
@@ -110,12 +118,12 @@ const Index = () => {
                 viewport={{ once: true }}
                 variants={fadeUpVariants}
                 custom={index}
-                className="text-center"
+                className="text-center group"
               >
-                <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-3">
-                  <item.icon className="w-5 h-5 text-primary" />
+                <div className="w-14 h-14 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-4 group-hover:bg-primary/20 transition-colors">
+                  <item.icon className="w-6 h-6 text-primary" />
                 </div>
-                <h3 className="font-serif text-base font-semibold text-foreground mb-1">
+                <h3 className="font-serif text-lg font-semibold text-foreground mb-2">
                   {item.title}
                 </h3>
                 <p className="text-muted-foreground text-sm">
@@ -128,21 +136,26 @@ const Index = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-16 bg-muted/30">
+      <section className="py-20 bg-muted/40">
         <div className="container mx-auto px-4">
-          <div className="max-w-2xl mx-auto text-center">
+          <motion.div 
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="max-w-2xl mx-auto text-center"
+          >
             <h2 className="font-serif text-2xl md:text-3xl font-semibold text-foreground mb-4">
               Ready to Partner with Us?
             </h2>
-            <p className="text-muted-foreground mb-6">
+            <p className="text-muted-foreground mb-8">
               Whether you need bulk supply, custom blends, or standard spice products, we're here to serve your business needs.
             </p>
-            <Button asChild>
+            <Button asChild size="lg">
               <Link to="/contact">
                 Get a Quote <ArrowRight className="w-4 h-4" />
               </Link>
             </Button>
-          </div>
+          </motion.div>
         </div>
       </section>
     </Layout>

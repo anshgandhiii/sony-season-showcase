@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import { Layout } from "@/components/layout/Layout";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, Sparkles } from "lucide-react";
 
 const fadeUpVariants = {
   hidden: { opacity: 0, y: 20 },
@@ -10,11 +10,21 @@ const fadeUpVariants = {
     opacity: 1,
     y: 0,
     transition: {
-      delay: i * 0.05,
+      delay: i * 0.02,
       duration: 0.4,
       ease: "easeOut" as const,
     },
   }),
+};
+
+const containerVariants = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.02,
+    },
+  },
 };
 
 const seasonings = [
@@ -64,27 +74,24 @@ const Products = () => {
   return (
     <Layout>
       {/* Hero Section */}
-      <section className="pt-28 pb-16 bg-background">
+      <section className="pt-28 pb-12 bg-gradient-to-b from-primary/5 to-background">
         <div className="container mx-auto px-4">
           <motion.div
-            initial="hidden"
-            animate="visible"
-            className="max-w-2xl"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}
+            className="max-w-2xl mx-auto text-center"
           >
-            <motion.h1
-              variants={fadeUpVariants}
-              custom={0}
-              className="font-serif text-3xl md:text-4xl font-semibold text-foreground mb-4"
-            >
-              Our Products
-            </motion.h1>
-            <motion.p
-              variants={fadeUpVariants}
-              custom={1}
-              className="text-muted-foreground leading-relaxed"
-            >
-              Premium seasonings and spices crafted for food manufacturers, processors, and brands.
-            </motion.p>
+            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 text-primary text-sm mb-4">
+              <Sparkles className="w-4 h-4" />
+              <span>40+ Premium Seasonings</span>
+            </div>
+            <h1 className="font-serif text-3xl md:text-4xl font-semibold text-foreground mb-3">
+              Our Product Range
+            </h1>
+            <p className="text-muted-foreground">
+              Premium seasonings crafted for food manufacturers, processors, and brands.
+            </p>
           </motion.div>
         </div>
       </section>
@@ -93,6 +100,7 @@ const Products = () => {
       <section className="py-12 pb-20">
         <div className="container mx-auto px-4">
           <motion.div
+            variants={containerVariants}
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}
@@ -103,9 +111,11 @@ const Products = () => {
                 key={product}
                 variants={fadeUpVariants}
                 custom={index}
-                className="bg-card border border-border/50 rounded-lg px-4 py-3 text-sm text-foreground hover:border-primary/30 transition-colors"
+                whileHover={{ scale: 1.02, y: -2 }}
+                className="group relative bg-card border border-border/50 rounded-xl px-4 py-4 text-sm text-foreground hover:border-primary/40 hover:shadow-soft transition-all duration-300 cursor-default"
               >
-                {product}
+                <div className="absolute top-2 right-2 w-2 h-2 rounded-full bg-accent/60 group-hover:bg-primary transition-colors" />
+                <span className="font-medium">{product}</span>
               </motion.div>
             ))}
           </motion.div>
@@ -113,21 +123,26 @@ const Products = () => {
       </section>
 
       {/* Custom Blends CTA */}
-      <section className="py-16 bg-muted/30">
+      <section className="py-16 bg-secondary text-secondary-foreground">
         <div className="container mx-auto px-4">
-          <div className="max-w-2xl mx-auto text-center">
-            <h2 className="font-serif text-2xl font-semibold text-foreground mb-3">
+          <motion.div 
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="max-w-2xl mx-auto text-center"
+          >
+            <h2 className="font-serif text-2xl md:text-3xl font-semibold mb-3">
               Need Custom Blends?
             </h2>
-            <p className="text-muted-foreground mb-6">
-              We create custom seasoning formulations tailored to your brand's requirements.
+            <p className="text-secondary-foreground/80 mb-6">
+              We create custom seasoning formulations tailored to your brand's unique requirements.
             </p>
-            <Button asChild>
+            <Button asChild variant="heroOutline" className="border-secondary-foreground/30 text-secondary-foreground hover:bg-secondary-foreground/10">
               <Link to="/contact">
                 Get in Touch <ArrowRight className="w-4 h-4" />
               </Link>
             </Button>
-          </div>
+          </motion.div>
         </div>
       </section>
     </Layout>

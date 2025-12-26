@@ -9,6 +9,7 @@ const navLinks = [
   { href: "/", label: "Home" },
   { href: "/about", label: "About Us" },
   { href: "/products", label: "Products" },
+  { href: "/accreditation", label: "Accreditation" },
   { href: "/contact", label: "Contact" },
 ];
 
