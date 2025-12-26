@@ -1,28 +1,17 @@
 import { Link } from "react-router-dom";
-import { MapPin, Phone, Mail, Clock } from "lucide-react";
+import { MapPin, Phone, Mail } from "lucide-react";
+import logo from "@/assets/logo.jpeg";
 
 export function Footer() {
   return (
     <footer className="bg-secondary text-secondary-foreground">
-      <div className="container mx-auto px-4 py-16">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
+      <div className="container mx-auto px-4 py-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
           {/* Brand */}
           <div className="space-y-4">
-            <div className="flex items-center gap-3">
-              <div className="w-10 h-10 rounded-full bg-primary flex items-center justify-center">
-                <span className="text-primary-foreground font-serif font-bold text-lg">S</span>
-              </div>
-              <div className="flex flex-col">
-                <span className="font-serif text-lg font-semibold leading-tight">
-                  Sony Seasonings
-                </span>
-                <span className="text-xs text-secondary-foreground/70 tracking-wider uppercase">
-                  & Spices
-                </span>
-              </div>
-            </div>
+            <img src={logo} alt="Sony Seasonings & Spices" className="w-16 h-16 rounded-full object-cover" />
             <p className="text-secondary-foreground/80 text-sm leading-relaxed">
-              One of the leading manufacturers of seasonings and spices with 17+ years of experience, trusted by renowned food brands.
+              Manufacturers of premium seasonings and spices with 17+ years of experience.
             </p>
           </div>
 
@@ -72,30 +61,24 @@ export function Footer() {
 
           {/* Contact Info */}
           <div>
-            <h4 className="font-serif text-lg font-semibold mb-6">Contact Us</h4>
-            <ul className="space-y-4">
-              <li className="flex items-start gap-3">
-                <MapPin className="w-5 h-5 text-primary mt-0.5 shrink-0" />
+            <h4 className="font-serif text-base font-semibold mb-4">Contact</h4>
+            <ul className="space-y-3">
+              <li className="flex items-start gap-2">
+                <MapPin className="w-4 h-4 text-primary mt-0.5 shrink-0" />
                 <span className="text-secondary-foreground/80 text-sm">
-                  Godbunder Road, Thane, Maharashtra, India
+                  Block-F, Vishal Industrial Complex, Ghodbunder Road, Thane-401104
                 </span>
               </li>
-              <li className="flex items-center gap-3">
-                <Phone className="w-5 h-5 text-primary shrink-0" />
+              <li className="flex items-center gap-2">
+                <Phone className="w-4 h-4 text-primary shrink-0" />
                 <span className="text-secondary-foreground/80 text-sm">
-                  +91 XXXX XXXXXX
+                  +91 98193 01070
                 </span>
               </li>
-              <li className="flex items-center gap-3">
-                <Mail className="w-5 h-5 text-primary shrink-0" />
+              <li className="flex items-center gap-2">
+                <Mail className="w-4 h-4 text-primary shrink-0" />
                 <span className="text-secondary-foreground/80 text-sm">
-                  info@sonyspices.com
-                </span>
-              </li>
-              <li className="flex items-center gap-3">
-                <Clock className="w-5 h-5 text-primary shrink-0" />
-                <span className="text-secondary-foreground/80 text-sm">
-                  Mon - Sat: 9:00 AM - 6:00 PM
+                  sonyseasoningsandspics@gmail.com
                 </span>
               </li>
             </ul>
@@ -103,15 +86,10 @@ export function Footer() {
         </div>
 
         {/* Bottom Bar */}
-        <div className="mt-12 pt-8 border-t border-secondary-foreground/10">
-          <div className="flex flex-col md:flex-row justify-between items-center gap-4">
-            <p className="text-secondary-foreground/60 text-sm">
-              © {new Date().getFullYear()} Sony Seasonings & Spices. All rights reserved.
-            </p>
-            <p className="text-secondary-foreground/60 text-sm">
-              Crafting Authentic Flavours Since 2007
-            </p>
-          </div>
+        <div className="mt-10 pt-6 border-t border-secondary-foreground/10">
+          <p className="text-secondary-foreground/60 text-sm text-center">
+            © {new Date().getFullYear()} Sony Seasonings & Spices. All rights reserved.
+          </p>
         </div>
       </div>
     </footer>
