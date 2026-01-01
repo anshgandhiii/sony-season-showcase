@@ -48,118 +48,127 @@ const heroVariants = {
   }
 };
 
-// Product data with categories and color themes
+// Use-case based categories for B2B manufacturing clients
 const productCategories = [
   {
-    name: "Spicy & Hot",
-    icon: Flame,
-    color: "from-red-500 to-orange-500",
-    bgColor: "bg-red-50 dark:bg-red-950/30",
-    iconColor: "text-red-500",
-    products: [
-      "Peri Peri Seasoning",
-      "Green Chilli Seasoning",
-      "Chilli Tomato Seasoning",
-      "Schezwan Seasoning",
-      "Schezwan Chutney Seasoning",
-      "Jalapeno Seasoning",
-      "Cheese Jalapeno Seasoning",
-    ]
-  },
-  {
-    name: "Cheese & Creamy",
+    name: "Potato Chips",
     icon: UtensilsCrossed,
     color: "from-amber-400 to-yellow-500",
     bgColor: "bg-amber-50 dark:bg-amber-950/30",
     iconColor: "text-amber-500",
     products: [
       "Cheese Seasoning",
-      "Cheese Hubs Seasoning",
       "Cream & Onion Seasoning",
-      "Butter Salt Seasoning",
-      "Nacho Seasoning",
-    ]
-  },
-  {
-    name: "Tomato & Tangy",
-    icon: Cherry,
-    color: "from-rose-500 to-red-400",
-    bgColor: "bg-rose-50 dark:bg-rose-950/30",
-    iconColor: "text-rose-500",
-    products: [
+      "Peri Peri Seasoning",
       "Tomato Seasoning",
       "Tangy Tomato Seasoning",
-      "Tomato Ketchup",
-      "Tomato Spanish",
-      "Sony Tomato Seasoning",
-    ]
-  },
-  {
-    name: "Citrus & Fresh",
-    icon: Droplets,
-    color: "from-lime-400 to-emerald-500",
-    bgColor: "bg-lime-50 dark:bg-lime-950/30",
-    iconColor: "text-lime-500",
-    products: [
+      "Barbeque Seasoning",
       "Lime Chilli Seasoning",
-      "Lime Pudina Seasoning",
-      "Lime White Pepper Seasoning",
-      "Pudina Seasoning",
+      "Chatpata Seasoning",
     ]
   },
   {
-    name: "Asian & Oriental",
-    icon: Soup,
-    color: "from-orange-500 to-red-500",
+    name: "Makhana",
+    icon: Star,
+    color: "from-emerald-400 to-teal-500",
+    bgColor: "bg-emerald-50 dark:bg-emerald-950/30",
+    iconColor: "text-emerald-500",
+    products: [
+      "Peri Peri Seasoning",
+      "Cream & Onion Seasoning",
+      "Cheese Seasoning",
+      "Pudina Seasoning",
+      "Butter Salt Seasoning",
+      "Chatpata Seasoning",
+    ]
+  },
+  {
+    name: "Popcorn",
+    icon: Flame,
+    color: "from-orange-400 to-red-500",
     bgColor: "bg-orange-50 dark:bg-orange-950/30",
     iconColor: "text-orange-500",
     products: [
-      "Manchurian Seasoning",
-      "Sony Manchurian Seasoning",
-      "Kimchi Seasoning",
-      "Soya Seasoning",
+      "Butter Salt Seasoning",
+      "Caramel Premix Seasoning",
+      "Cheese Seasoning",
+      "Peri Peri Seasoning",
+      "Barbeque Seasoning",
+      "Jalapeno Seasoning",
     ]
   },
   {
-    name: "International",
+    name: "Namkeen & Snacks",
+    icon: Leaf,
+    color: "from-lime-400 to-green-500",
+    bgColor: "bg-lime-50 dark:bg-lime-950/30",
+    iconColor: "text-lime-600",
+    products: [
+      "Aloo Bhujiya Seasoning",
+      "Hing Jeera Seasoning",
+      "Chatpata Seasoning",
+      "Achar Masala Seasoning",
+      "Kurkure Seasoning",
+      "Pani Puri Seasoning",
+    ]
+  },
+  {
+    name: "Noodles & Pasta",
+    icon: Soup,
+    color: "from-red-500 to-rose-500",
+    bgColor: "bg-red-50 dark:bg-red-950/30",
+    iconColor: "text-red-500",
+    products: [
+      "Maggi Seasoning",
+      "Schezwan Seasoning",
+      "Manchurian Seasoning",
+      "Cheese Seasoning",
+      "Pizza Seasoning",
+      "Tomato Seasoning",
+    ]
+  },
+  {
+    name: "Extruded Snacks",
     icon: Pizza,
     color: "from-indigo-400 to-purple-500",
     bgColor: "bg-indigo-50 dark:bg-indigo-950/30",
     iconColor: "text-indigo-500",
     products: [
-      "Pizza Seasoning",
+      "Cheese Hubs Seasoning",
+      "Nacho Seasoning",
       "Mexican Seasoning",
-      "Barbeque Seasoning",
+      "Pizza Seasoning",
+      "Cheese Jalapeno Seasoning",
+      "Green Chilli Seasoning",
     ]
   },
   {
-    name: "Traditional Indian",
-    icon: Leaf,
-    color: "from-emerald-500 to-teal-500",
-    bgColor: "bg-emerald-50 dark:bg-emerald-950/30",
-    iconColor: "text-emerald-600",
+    name: "Nuts & Dry Fruits",
+    icon: Cherry,
+    color: "from-rose-400 to-pink-500",
+    bgColor: "bg-rose-50 dark:bg-rose-950/30",
+    iconColor: "text-rose-500",
     products: [
-      "Achar Masala Seasoning",
-      "Aloo Bhujiya Seasoning",
+      "Peri Peri Seasoning",
+      "Lime Pudina Seasoning",
+      "Lime White Pepper Seasoning",
       "Chatpata Seasoning",
-      "Hing Jeera Seasoning",
-      "Kurkure Seasoning",
-      "Pani Puri Seasoning",
-      "Maggi Seasoning",
+      "Schezwan Chutney Seasoning",
     ]
   },
   {
-    name: "Specialty & Jain",
-    icon: Star,
+    name: "Ready-to-Cook",
+    icon: Droplets,
     color: "from-violet-400 to-purple-500",
     bgColor: "bg-violet-50 dark:bg-violet-950/30",
     iconColor: "text-violet-500",
     products: [
-      "Jain Peri Peri",
-      "Jain Barbeque",
-      "Jain Lime Chilli",
-      "Jain Maggi",
-      "Caramel Premix Seasoning",
+      "Sony Manchurian Seasoning",
+      "Sony Tomato Seasoning",
+      "Schezwan Seasoning",
+      "Kimchi Seasoning",
+      "Soya Seasoning",
+      "Tomato Spanish",
     ]
   },
 ];
