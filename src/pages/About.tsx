@@ -2,6 +2,9 @@ import { motion } from "framer-motion";
 import { Layout } from "@/components/layout/Layout";
 import { Target, Eye, CheckCircle, Handshake } from "lucide-react";
 import manufacturingImg from "@/assets/manufacturing.jpg";
+import spicesFlatlayImg from "@/assets/spices-flatlay.jpg";
+import qualityTeamImg from "@/assets/quality-team.jpg";
+import premiumSpicesImg from "@/assets/premium-spices.jpg";
 
 const fadeUpVariants = {
   hidden: { opacity: 0, y: 30 },
@@ -42,13 +45,21 @@ const values = [
 const About = () => {
   return (
     <Layout>
-      {/* Hero Section */}
-      <section className="relative py-20 lg:py-28 bg-gradient-warm overflow-hidden">
-        <div className="container mx-auto px-4">
+      {/* Hero Section with Image */}
+      <section className="relative py-20 lg:py-28 overflow-hidden">
+        <div className="absolute inset-0">
+          <img 
+            src={spicesFlatlayImg} 
+            alt="Colorful Indian spices in wooden bowls" 
+            className="w-full h-full object-cover"
+          />
+          <div className="absolute inset-0 bg-gradient-to-r from-background/95 via-background/80 to-background/40" />
+        </div>
+        <div className="container mx-auto px-4 relative z-10">
           <motion.div
             initial="hidden"
             animate="visible"
-            className="max-w-3xl"
+            className="max-w-2xl"
           >
             <motion.p
               variants={fadeUpVariants}
@@ -117,8 +128,8 @@ const About = () => {
             >
               <div className="rounded-2xl overflow-hidden shadow-elevated">
                 <img
-                  src={manufacturingImg}
-                  alt="Sony Seasonings & Spices manufacturing facility"
+                  src={qualityTeamImg}
+                  alt="Quality control team inspecting spices"
                   className="w-full h-[400px] object-cover"
                 />
               </div>
@@ -228,13 +239,21 @@ const About = () => {
       </section>
 
       {/* Manufacturing Excellence */}
-      <section className="py-20 lg:py-28 bg-secondary text-secondary-foreground">
-        <div className="container mx-auto px-4">
+      <section className="relative py-20 lg:py-28 overflow-hidden">
+        <div className="absolute inset-0">
+          <img 
+            src={manufacturingImg} 
+            alt="Modern spice manufacturing facility" 
+            className="w-full h-full object-cover"
+          />
+          <div className="absolute inset-0 bg-secondary/90" />
+        </div>
+        <div className="container mx-auto px-4 relative z-10">
           <motion.div
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}
-            className="max-w-3xl mx-auto text-center"
+            className="max-w-3xl mx-auto text-center text-secondary-foreground"
           >
             <motion.h2
               variants={fadeUpVariants}
@@ -248,7 +267,7 @@ const About = () => {
               custom={1}
               className="text-secondary-foreground/80 text-lg leading-relaxed mb-8"
             >
-              Our manufacturing facility in Thane is equipped with modern processing equipment that ensures optimal grinding, blending, and packaging of spices. We maintain strict quality control measures at every stage:
+              Our manufacturing facility in Thane is equipped with modern processing equipment that ensures optimal grinding, blending, and packaging of spices. We maintain strict quality control measures at every stage.
             </motion.p>
             <motion.div
               variants={fadeUpVariants}
@@ -260,7 +279,7 @@ const About = () => {
                 { number: "ISO", label: "Certified Processes" },
                 { number: "24/7", label: "Production Capability" },
               ].map((stat) => (
-                <div key={stat.label} className="bg-secondary-foreground/10 rounded-lg p-6">
+                <div key={stat.label} className="bg-secondary-foreground/10 rounded-lg p-6 backdrop-blur-sm">
                   <p className="font-serif text-3xl font-bold text-primary mb-2">
                     {stat.number}
                   </p>
