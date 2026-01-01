@@ -4,6 +4,7 @@ import { Target, Eye, CheckCircle, Handshake } from "lucide-react";
 import manufacturingImg from "@/assets/manufacturing.jpg";
 import spicesFlatlayImg from "@/assets/spices-flatlay.jpg";
 import qualityTeamImg from "@/assets/quality-team.jpg";
+import girl from "@/assets/About us girl.jpeg";
 import premiumSpicesImg from "@/assets/premium-spices.jpg";
 
 const fadeUpVariants = {
@@ -49,9 +50,9 @@ const About = () => {
       <section className="relative py-20 lg:py-28 overflow-hidden">
         <div className="absolute inset-0">
           <img 
-            src={spicesFlatlayImg} 
+            src={girl} 
             alt="Colorful Indian spices in wooden bowls" 
-            className="w-full h-full object-cover"
+            className="w-full h-full"
           />
           <div className="absolute inset-0 bg-gradient-to-r from-background/95 via-background/80 to-background/40" />
         </div>
