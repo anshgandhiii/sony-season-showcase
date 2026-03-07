@@ -1,0 +1,16 @@
+<svg width="160" height="120" viewBox="0 0 160 120" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bbqGradient" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#991B1B"/>
+      <stop offset="100%" stop-color="#F97316"/>
+    </linearGradient>
+  </defs>
+  <rect x="0" y="0" width="160" height="120" rx="16" fill="url(#bbqGradient)"/>
+  <rect x="32" y="44" width="80" height="40" rx="12" fill="#1F2937" stroke="#F97316" stroke-width="2"/>
+  <path d="M40 84 H104" stroke="#F97316" stroke-width="3" stroke-linecap="round"/>
+  <path d="M52 40 C54 32, 60 30, 64 34 C68 38, 74 40, 76 34 C80 26, 88 26, 92 34" fill="none" stroke="#FBBF24" stroke-width="2" stroke-linecap="round"/>
+  <text x="22" y="108" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif"
+        font-size="12" fill="#FEF2F2" font-weight="600">
+    Barbeque Seasoning
+  </text>
+</svg>

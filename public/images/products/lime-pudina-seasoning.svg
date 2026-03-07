@@ -1,0 +1,18 @@
+<svg width="160" height="120" viewBox="0 0 160 120" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="limePudinaGradient" x1="0" y="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#D9F99D"/>
+      <stop offset="50%" stop-color="#22C55E"/>
+      <stop offset="100%" stop-color="#4ADE80"/>
+    </linearGradient>
+  </defs>
+  <rect x="0" y="0" width="160" height="120" rx="16" fill="url(#limePudinaGradient)"/>
+  <circle cx="50" cy="64" r="18" fill="#FEFCE8" stroke="#84CC16" stroke-width="2"/>
+  <path d="M50 50 A14 14 0 0 1 64 64" fill="none" stroke="#4D7C0F" stroke-width="2"/>
+  <path d="M86 84 C74 72, 74 58, 86 50 C98 42, 112 46, 118 56 C124 66, 120 78, 108 86 C100 92, 94 92, 86 84 Z"
+        fill="#22C55E" stroke="#15803D" stroke-width="2"/>
+  <text x="12" y="108" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif"
+        font-size="11" fill="#052E16" font-weight="600">
+    Lime Pudina Seasoning
+  </text>
+</svg>

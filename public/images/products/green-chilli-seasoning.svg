@@ -1,0 +1,16 @@
+<svg width="160" height="120" viewBox="0 0 160 120" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="greenChilliGradient" x1="0" y="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#BBF7D0"/>
+      <stop offset="100%" stop-color="#16A34A"/>
+    </linearGradient>
+  </defs>
+  <rect x="0" y="0" width="160" height="120" rx="16" fill="url(#greenChilliGradient)"/>
+  <path d="M56 86 C46 72, 48 56, 60 48 C72 40, 88 44, 94 54 C100 64, 96 78, 86 86 C76 94, 64 94, 56 86 Z"
+        fill="#22C55E" stroke="#15803D" stroke-width="2"/>
+  <path d="M64 46 C66 38, 72 34, 78 34" fill="none" stroke="#DCFCE7" stroke-width="2" stroke-linecap="round"/>
+  <text x="16" y="108" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif"
+        font-size="12" fill="#052E16" font-weight="600">
+    Green Chilli Seasoning
+  </text>
+</svg>

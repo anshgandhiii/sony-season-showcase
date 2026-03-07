@@ -176,6 +176,44 @@ const productCategories = [
 // Flatten all products for the count
 const allProducts = productCategories.flatMap(cat => cat.products);
 
+// Images for each product used on this page
+const productImages: Record<string, string> = {
+  "Cheese Seasoning": "/images/products/cheese-seasoning.svg",
+  "Cream & Onion Seasoning": "/images/products/cream-onion-seasoning.svg",
+  "Peri Peri Seasoning": "/images/products/peri-peri-seasoning.svg",
+  "Tomato Seasoning": "/images/products/tomato-seasoning.svg",
+  "Tangy Tomato Seasoning": "/images/products/tangy-tomato-seasoning.svg",
+  "Barbeque Seasoning": "/images/products/barbeque-seasoning.svg",
+  "Lime Chilli Seasoning": "/images/products/lime-chilli-seasoning.svg",
+  "Chatpata Seasoning": "/images/products/chatpata-seasoning.svg",
+  "Pudina Seasoning": "/images/products/pudina-seasoning.svg",
+  "Butter Salt Seasoning": "/images/products/butter-salt-seasoning.svg",
+  "Caramel Premix Seasoning": "/images/products/caramel-premix-seasoning.svg",
+  "Jalapeno Seasoning": "/images/products/jalapeno-seasoning.svg",
+  "Aloo Bhujiya Seasoning": "/images/products/aloo-bhujiya-seasoning.svg",
+  "Hing Jeera Seasoning": "/images/products/hing-jeera-seasoning.svg",
+  "Achar Masala Seasoning": "/images/products/achar-masala-seasoning.svg",
+  "Kurkure Seasoning": "/images/products/kurkure-seasoning.svg",
+  "Pani Puri Seasoning": "/images/products/pani-puri-seasoning.svg",
+  "Maggi Seasoning": "/images/products/maggi-seasoning.svg",
+  "Schezwan Seasoning": "/images/products/schezwan-seasoning.svg",
+  "Manchurian Seasoning": "/images/products/manchurian-seasoning.svg",
+  "Pizza Seasoning": "/images/products/pizza-seasoning.svg",
+  "Cheese Hubs Seasoning": "/images/products/cheese-hubs-seasoning.svg",
+  "Nacho Seasoning": "/images/products/nacho-seasoning.svg",
+  "Mexican Seasoning": "/images/products/mexican-seasoning.svg",
+  "Cheese Jalapeno Seasoning": "/images/products/cheese-jalapeno-seasoning.svg",
+  "Green Chilli Seasoning": "/images/products/green-chilli-seasoning.svg",
+  "Lime Pudina Seasoning": "/images/products/lime-pudina-seasoning.svg",
+  "Lime White Pepper Seasoning": "/images/products/lime-white-pepper-seasoning.svg",
+  "Schezwan Chutney Seasoning": "/images/products/schezwan-chutney-seasoning.svg",
+  "Sony Manchurian Seasoning": "/images/products/sony-manchurian-seasoning.svg",
+  "Sony Tomato Seasoning": "/images/products/sony-tomato-seasoning.svg",
+  "Kimchi Seasoning": "/images/products/kimchi-seasoning.svg",
+  "Soya Seasoning": "/images/products/soya-seasoning.svg",
+  "Tomato Spanish": "/images/products/tomato-spanish-seasoning.svg",
+};
+
 const Products = () => {
   return (
     <Layout>
@@ -297,6 +335,20 @@ const Products = () => {
                       <div className="relative h-full bg-card/95 backdrop-blur-sm border border-border/60 rounded-2xl p-5 transition-all duration-300 group-hover:border-transparent group-hover:shadow-elevated">
                         {/* Decorative corner accent */}
                         <div className={`absolute top-3 right-3 w-2.5 h-2.5 rounded-full bg-gradient-to-br ${category.color} opacity-60 group-hover:opacity-100 group-hover:scale-125 transition-all duration-300`} />
+
+                        {/* Product image (always shown; falls back if missing) */}
+                        <div className="w-full h-20 rounded-xl overflow-hidden mb-3 bg-muted/40">
+                          <img
+                            src={productImages[product] ?? "/placeholder.svg"}
+                            alt={product}
+                            loading="lazy"
+                            className="w-full h-full object-cover"
+                            onError={(e) => {
+                              if (e.currentTarget.src.includes("placeholder.svg")) return;
+                              e.currentTarget.src = "/placeholder.svg";
+                            }}
+                          />
+                        </div>
 
                         {/* Icon */}
                         <div className={`w-10 h-10 rounded-lg ${category.bgColor} flex items-center justify-center mb-3 group-hover:scale-110 transition-transform duration-300`}>

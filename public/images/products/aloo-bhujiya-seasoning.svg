@@ -1,0 +1,16 @@
+<svg width="160" height="120" viewBox="0 0 160 120" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="alooBhujiyaGradient" x1="0" y="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#F97316"/>
+      <stop offset="100%" stop-color="#FACC15"/>
+    </linearGradient>
+  </defs>
+  <rect x="0" y="0" width="160" height="120" rx="16" fill="url(#alooBhujiyaGradient)"/>
+  <ellipse cx="72" cy="78" rx="44" ry="18" fill="#FEF3C7" stroke="#EA580C" stroke-width="2"/>
+  <path d="M40 76 C52 70, 60 82, 72 76 C84 70, 92 82, 104 76" fill="none" stroke="#F97316" stroke-width="3" stroke-linecap="round"/>
+  <path d="M44 70 C56 64, 64 76, 76 70 C88 64, 96 76, 108 70" fill="none" stroke="#FACC15" stroke-width="2" stroke-linecap="round"/>
+  <text x="10" y="108" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif"
+        font-size="11" fill="#7C2D12" font-weight="600">
+    Aloo Bhujiya Seasoning
+  </text>
+</svg>

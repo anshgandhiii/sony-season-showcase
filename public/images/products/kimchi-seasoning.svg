@@ -1,0 +1,16 @@
+<svg width="160" height="120" viewBox="0 0 160 120" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="kimchiGradient" x1="0" y="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#F97316"/>
+      <stop offset="50%" stop-color="#FB7185"/>
+      <stop offset="100%" stop-color="#DC2626"/>
+    </linearGradient>
+  </defs>
+  <rect x="0" y="0" width="160" height="120" rx="16" fill="url(#kimchiGradient)"/>
+  <ellipse cx="80" cy="80" rx="44" ry="18" fill="#FEF2F2" stroke="#B91C1C" stroke-width="2"/>
+  <path d="M52 78 C60 68, 68 86, 76 74 C84 62, 92 86, 100 74 C108 62, 116 82, 124 72" fill="none" stroke="#F97316" stroke-width="4" stroke-linecap="round"/>
+  <text x="32" y="108" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif"
+        font-size="12" fill="#FEF2F2" font-weight="600">
+    Kimchi Seasoning
+  </text>
+</svg>

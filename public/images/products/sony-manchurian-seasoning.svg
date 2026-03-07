@@ -1,0 +1,17 @@
+<svg width="160" height="120" viewBox="0 0 160 120" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="sonyManchurianGradient" x1="0" y="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#38BDF8"/>
+      <stop offset="100%" stop-color="#4ADE80"/>
+    </linearGradient>
+  </defs>
+  <rect x="0" y="0" width="160" height="120" rx="16" fill="url(#sonyManchurianGradient)"/>
+  <ellipse cx="76" cy="80" rx="44" ry="18" fill="#F9FAFB" stroke="#0F172A" stroke-width="2"/>
+  <circle cx="60" cy="74" r="7" fill="#F97316"/>
+  <circle cx="76" cy="70" r="7" fill="#22C55E"/>
+  <circle cx="92" cy="74" r="7" fill="#6366F1"/>
+  <text x="2" y="108" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif"
+        font-size="11" fill="#020617" font-weight="600">
+    Sony Manchurian Seasoning
+  </text>
+</svg>
