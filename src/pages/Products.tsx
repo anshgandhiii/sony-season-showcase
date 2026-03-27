@@ -178,40 +178,40 @@ const allProducts = productCategories.flatMap(cat => cat.products);
 
 // Images for each product used on this page
 const productImages: Record<string, string> = {
-  "Cheese Seasoning": "/images/products/cheese-seasoning.svg",
-  "Cream & Onion Seasoning": "/images/products/cream-onion-seasoning.svg",
-  "Peri Peri Seasoning": "/images/products/peri-peri-seasoning.svg",
-  "Tomato Seasoning": "/images/products/tomato-seasoning.svg",
-  "Tangy Tomato Seasoning": "/images/products/tangy-tomato-seasoning.svg",
-  "Barbeque Seasoning": "/images/products/barbeque-seasoning.svg",
-  "Lime Chilli Seasoning": "/images/products/lime-chilli-seasoning.svg",
-  "Chatpata Seasoning": "/images/products/chatpata-seasoning.svg",
-  "Pudina Seasoning": "/images/products/pudina-seasoning.svg",
-  "Butter Salt Seasoning": "/images/products/butter-salt-seasoning.svg",
-  "Caramel Premix Seasoning": "/images/products/caramel-premix-seasoning.svg",
-  "Jalapeno Seasoning": "/images/products/jalapeno-seasoning.svg",
-  "Aloo Bhujiya Seasoning": "/images/products/aloo-bhujiya-seasoning.svg",
-  "Hing Jeera Seasoning": "/images/products/hing-jeera-seasoning.svg",
-  "Achar Masala Seasoning": "/images/products/achar-masala-seasoning.svg",
-  "Kurkure Seasoning": "/images/products/kurkure-seasoning.svg",
-  "Pani Puri Seasoning": "/images/products/pani-puri-seasoning.svg",
-  "Maggi Seasoning": "/images/products/maggi-seasoning.svg",
-  "Schezwan Seasoning": "/images/products/schezwan-seasoning.svg",
-  "Manchurian Seasoning": "/images/products/manchurian-seasoning.svg",
-  "Pizza Seasoning": "/images/products/pizza-seasoning.svg",
-  "Cheese Hubs Seasoning": "/images/products/cheese-hubs-seasoning.svg",
-  "Nacho Seasoning": "/images/products/nacho-seasoning.svg",
-  "Mexican Seasoning": "/images/products/mexican-seasoning.svg",
-  "Cheese Jalapeno Seasoning": "/images/products/cheese-jalapeno-seasoning.svg",
-  "Green Chilli Seasoning": "/images/products/green-chilli-seasoning.svg",
-  "Lime Pudina Seasoning": "/images/products/lime-pudina-seasoning.svg",
-  "Lime White Pepper Seasoning": "/images/products/lime-white-pepper-seasoning.svg",
-  "Schezwan Chutney Seasoning": "/images/products/schezwan-chutney-seasoning.svg",
-  "Sony Manchurian Seasoning": "/images/products/sony-manchurian-seasoning.svg",
-  "Sony Tomato Seasoning": "/images/products/sony-tomato-seasoning.svg",
-  "Kimchi Seasoning": "/images/products/kimchi-seasoning.svg",
-  "Soya Seasoning": "/images/products/soya-seasoning.svg",
-  "Tomato Spanish": "/images/products/tomato-spanish-seasoning.svg",
+  "Cheese Seasoning": "/images/products/cheese-seasoning.png",
+  "Cream & Onion Seasoning": "/images/products/cream-onion-seasoning.png",
+  "Peri Peri Seasoning": "/images/products/peri-peri-seasoning.png",
+  "Tomato Seasoning": "/images/products/tomato-seasoning.png",
+  "Tangy Tomato Seasoning": "/images/products/tangy-tomato-seasoning.png",
+  "Barbeque Seasoning": "/images/products/barbeque-seasoning.png",
+  "Lime Chilli Seasoning": "/images/products/lime-chilli-seasoning.png",
+  "Chatpata Seasoning": "/images/products/chatpata-seasoning.png",
+  "Pudina Seasoning": "/images/products/pudina-seasoning.png",
+  "Butter Salt Seasoning": "/images/products/butter-salt-seasoning.png",
+  "Caramel Premix Seasoning": "/images/products/caramel-premix-seasoning.png",
+  "Jalapeno Seasoning": "/images/products/jalapeno-seasoning.png",
+  "Aloo Bhujiya Seasoning": "/images/products/aloo-bhujiya-seasoning.png",
+  "Hing Jeera Seasoning": "/images/products/hing-jeera-seasoning.png",
+  "Achar Masala Seasoning": "/images/products/achar-masala-seasoning.png",
+  "Kurkure Seasoning": "/images/products/kurkure-seasoning.png",
+  "Pani Puri Seasoning": "/images/products/pani-puri-seasoning.png",
+  "Maggi Seasoning": "/images/products/maggi-seasoning.png",
+  "Schezwan Seasoning": "/images/products/schezwan-seasoning.png",
+  "Manchurian Seasoning": "/images/products/manchurian-seasoning.png",
+  "Pizza Seasoning": "/images/products/pizza-seasoning.png",
+  "Cheese Hubs Seasoning": "/images/products/cheese-hubs-seasoning.png",
+  "Nacho Seasoning": "/images/products/nacho-seasoning.png",
+  "Mexican Seasoning": "/images/products/mexican-seasoning.png",
+  "Cheese Jalapeno Seasoning": "/images/products/cheese-jalapeno-seasoning.png",
+  "Green Chilli Seasoning": "/images/products/green-chilli-seasoning.png",
+  "Lime Pudina Seasoning": "/images/products/lime-pudina-seasoning.png",
+  "Lime White Pepper Seasoning": "/images/products/lime-white-pepper-seasoning.png",
+  "Schezwan Chutney Seasoning": "/images/products/schezwan-chutney-seasoning.png",
+  "Sony Manchurian Seasoning": "/images/products/sony-manchurian-seasoning.png",
+  "Sony Tomato Seasoning": "/images/products/sony-tomato-seasoning.png",
+  "Kimchi Seasoning": "/images/products/kimchi-seasoning.png",
+  "Soya Seasoning": "/images/products/soya-seasoning.png",
+  "Tomato Spanish": "/images/products/tomato-spanish-seasoning.png",
 };
 
 const Products = () => {
@@ -336,18 +336,19 @@ const Products = () => {
                         {/* Decorative corner accent */}
                         <div className={`absolute top-3 right-3 w-2.5 h-2.5 rounded-full bg-gradient-to-br ${category.color} opacity-60 group-hover:opacity-100 group-hover:scale-125 transition-all duration-300`} />
 
-                        {/* Product image (always shown; falls back if missing) */}
-                        <div className="w-full h-20 rounded-xl overflow-hidden mb-3 bg-muted/40">
+                        {/* Product image */}
+                        <div className="w-full h-32 rounded-xl overflow-hidden mb-3 bg-muted/30 relative shadow-sm group-hover:shadow-md transition-shadow duration-300">
                           <img
                             src={productImages[product] ?? "/placeholder.svg"}
                             alt={product}
                             loading="lazy"
-                            className="w-full h-full object-cover"
+                            className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                             onError={(e) => {
                               if (e.currentTarget.src.includes("placeholder.svg")) return;
                               e.currentTarget.src = "/placeholder.svg";
                             }}
                           />
+                          <div className={`absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300`} />
                         </div>
 
                         {/* Icon */}
